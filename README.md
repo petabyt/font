@@ -1,2 +1,12 @@
-# font
-My custom 8x7 general purpose font
+## Features:
+1. A-Z
+2. a-z
+3. 0-9
+4. Some symbols
+5. Good for DOS games, OS dev, VGA stuff
+
+## Usage:
+For easy modification, font is stored in 7x5 character array.  
+Simply loop through the array to find the char you need, then  
+loop through the characters, (height = 7, width = 5). When you  
+encounter a '#', plot a dot. If space, don't plot.
