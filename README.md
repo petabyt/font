@@ -1,3 +1,4 @@
+(Written in C, ignore Github Objective C)  
 ## Features:
 1. A-Z
 2. a-z
