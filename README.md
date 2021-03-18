@@ -1,4 +1,6 @@
-(Written in C, ignore Github Objective C)  
+# 7x5 Font
+A font I made a while back for an OS. Includes most common ASCII chars.  
+
 ## Features:
 1. A-Z
 2. a-z
