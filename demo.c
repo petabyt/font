@@ -1,5 +1,7 @@
 #include "font.h"
 
+// This is just a simple demonstration.
+
 int printChar(int x, int y, char c, char color) {
 	int match = 0;
 	for (int l = 0; l < (int)(sizeof(font) / sizeof(font[0])); l++) {
@@ -39,10 +41,11 @@ int printString(int x, int y, char *string, char color) {
 			c++;
 		}
 
-		int length = printChar(cx, cy, string[c], color);
-
+		int length;
 		if (string[c] == ' ') {
 			length = 5;
+		} else {
+			length = printChar(cx, cy, string[c], color);
 		}
 
 		cx += length + 3;
