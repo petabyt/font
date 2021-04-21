@@ -1,11 +1,17 @@
-// From https://github.com/petabyt/font/
-static struct Font {
+/*
+	Compiler command line options:
+	-DNO_LOWERCASE
+	-DNO_SYMBOL
+	-DNO_NUMBERS
+*/
+
+struct Font {
     char letter;
     char code[7][5];
 };
 
-static struct Font font[] = {
-{'~', { // Fallback Char
+struct Font font[] = {
+{0, { // Fallback Char
 "#####",
 "#####",
 "#####",
@@ -13,6 +19,14 @@ static struct Font font[] = {
 "#####",
 "#####",
 "#####"}},
+{' ', { // Processor should ignore this
+"     ",
+"     ",
+"     ",
+"     ",
+"     ",
+"     ",
+"     "}},
 {'A', {
 " ### ",
 "#   #",
@@ -221,14 +235,7 @@ static struct Font font[] = {
 " #   ",
 "#    ",
 "#####"}},
-{' ', {
-"     ",
-"     ",
-"     ",
-"     ",
-"     ",
-"     ",
-"     "}},
+#ifndef NO_LOWERCASE
 {'a', {
 "     ",
 "     ",
@@ -437,6 +444,8 @@ static struct Font font[] = {
 "  #  ",
 " #   ",
 "#####"}},
+#endif
+#ifndef NO_NUMBERS
 {'0', {
 " ### ",
 "#   #",
@@ -517,6 +526,8 @@ static struct Font font[] = {
 "    #",
 "    #",
 " ### "}},
+#endif
+#ifndef NO_SYMBOLS
 {'!', {
 "#    ",
 "#    ",
@@ -597,4 +608,45 @@ static struct Font font[] = {
 "#####",
 "     ",
 "     "}},
+{'_', {
+"     ",
+"     ",
+"     ",
+"     ",
+"     ",
+"     ",
+"#####"}},
+{':', {
+"     ",
+" #   ",
+"     ",
+"     ",
+" #   ",
+"     ",
+"     "}},
+{'<', {
+"   # ",
+"  #  ",
+" #   ",
+"#    ",
+" #   ",
+"  #  ",
+"   # "}},
+{'>', {
+" #   ",
+"  #  ",
+"   # ",
+"    #",
+"   # ",
+"  #  ",
+" #   "}},
+{'~', {
+"     ",
+"     ",
+"# # #",
+" # # ",
+"     ",
+"     ",
+"     "}},
+#endif
 };
