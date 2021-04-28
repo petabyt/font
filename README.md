@@ -4,6 +4,8 @@ https://github.com/petabyt/PrismOS2/blob/master/PRISMOS.BAS
 
 Good for DOS games, OS dev, VGA stuff  
 
+See it in action: https://github.com/petabyt/ahdk/blob/master/screen.jpg  
+
 ## Features:
 1. A-Z
 2. a-z
