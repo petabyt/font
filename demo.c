@@ -18,8 +18,9 @@ void drawPixel(int x, int y) {
 // This is just a simple demonstration.
 
 int printChar(int x, int y, char c) {
+	// Loop to "null terminator character"
 	int match = 0;
-	for (int l = 0; l < (int)(sizeof(font) / sizeof(font[0])); l++) {
+	for (int l = 0; font[l].letter != 0; l++) {
 		if (font[l].letter == c) {
 			match = l;
 			break;
@@ -75,7 +76,7 @@ int printString(int x, int y, char *string) {
 int main() {
 	setlocale(LC_CTYPE, "");
 	
-	printString(0, 0, "Font test test test");
+	printString(0, 0, "**");
 
 	// Use upper half, lower half, and full to simulate graphics
 	for (int y = 0; y < SCREEN_HEIGHT; y += 2) {

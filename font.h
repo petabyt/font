@@ -13,15 +13,7 @@ struct Font {
 };
 
 struct Font font[] = {
-{0, { // Fallback Char
-"#####",
-"#####",
-"#####",
-"#####",
-"#####",
-"#####",
-"#####"}},
-{' ', { // Processor should ignore this
+{' ', { /* Processor should ignore this */
 "     ",
 "     ",
 "     ",
@@ -675,6 +667,16 @@ struct Font font[] = {
 "     ",
 "     "}},
 #endif
+/* Fallback/end Char. If you don't know the
+font size, use this as the "null terminator" */
+{0, {
+"#####",
+"#####",
+"#####",
+"#####",
+"#####",
+"#####",
+"#####"}},
 };
 
 #endif
