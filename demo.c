@@ -76,7 +76,7 @@ int printString(int x, int y, char *string) {
 int main() {
 	setlocale(LC_CTYPE, "");
 	
-	printString(0, 0, "**");
+	printString(0, 0, "()");
 
 	// Use upper half, lower half, and full to simulate graphics
 	for (int y = 0; y < SCREEN_HEIGHT; y += 2) {
