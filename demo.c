@@ -6,7 +6,7 @@
 
 #include "font.h"
 
-#define SCREEN_WIDTH 5 * 20
+#define SCREEN_WIDTH 5 * 30
 #define SCREEN_HEIGHT 7 * 2 + 2
 
 char buffer[SCREEN_HEIGHT][SCREEN_WIDTH] = {0};
@@ -54,10 +54,10 @@ int printString(int x, int y, char *string) {
 		if (string[c] == ' ') {
 			length = 5;
 		} else {
-			length = printChar(cx, cy, string[c]);
+			length = printChar(cx, cy, string[c]) + 3;
 		}
 
-		cx += length + 3;
+		cx += length;
 
 		// Text wrap after space
 		#ifdef SCREEN_WIDTH
@@ -76,7 +76,8 @@ int printString(int x, int y, char *string) {
 int main() {
 	setlocale(LC_CTYPE, "");
 	
-	printString(0, 0, "()");
+	printString(0, 0, "#include <stdio.h>");
+	printString(0, 8, "int main() {return 0;}");
 
 	// Use upper half, lower half, and full to simulate graphics
 	for (int y = 0; y < SCREEN_HEIGHT; y += 2) {
