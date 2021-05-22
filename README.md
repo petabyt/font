@@ -1,7 +1,7 @@
 # 7x5 Font
-A font I made a while back for an OS. Includes most ASCII chars.  
-https://github.com/petabyt/PrismOS2/blob/master/PRISMOS.BAS  
-See it in action: https://github.com/petabyt/ahdk/blob/master/screen.jpg  
+![Demo](example.png)
+
+A tiny and easy font for OS dev, embedded, etc.
 
 ## Features:
 - A-Z
@@ -9,6 +9,8 @@ See it in action: https://github.com/petabyt/ahdk/blob/master/screen.jpg
 - 0-9
 - Some symbols
 - Easy to modify and add new characters
+- Preprocessor options
+- ASCII independent
 
 ## Usage:
 For easy modification, the font is stored in 7x5 character array.  

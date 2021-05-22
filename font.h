@@ -4,6 +4,8 @@
 	-DNO_SYMBOL
 	-DNO_NUMBERS
 */
+#ifndef FONT_H
+#define FONT_H
 
 struct Font {
     char letter;
@@ -656,5 +658,23 @@ struct Font font[] = {
 "     ",
 "     ",
 "     "}},
+{'/', {
+"    #",
+"    #",
+"   # ",
+"  #  ",
+" #   ",
+" #   ",
+"#    "}},
+{'\'', {
+"#    ",
+"#    ",
+"#    ",
+"     ",
+"     ",
+"     ",
+"     "}},
 #endif
 };
+
+#endif
