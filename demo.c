@@ -1,4 +1,5 @@
 // Unicode terminal printer
+// Try it out: `cc *.c; ./a.out`
 
 #include <stdio.h>
 #include <wchar.h>
