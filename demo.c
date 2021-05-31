@@ -7,15 +7,13 @@
 #include "font.h"
 
 #define SCREEN_WIDTH 5 * 30
-#define SCREEN_HEIGHT 7 * 2 + 2
+#define SCREEN_HEIGHT 7 * 3 + 2
 
 char buffer[SCREEN_HEIGHT][SCREEN_WIDTH] = {0};
 
 void drawPixel(int x, int y) {
 	buffer[y][x] = 1;
 }
-
-// This is just a simple demonstration.
 
 int printChar(int x, int y, char c) {
 	// Loop to "null terminator character"
@@ -60,14 +58,11 @@ int printString(int x, int y, char *string) {
 		cx += length;
 
 		// Text wrap after space
-		#ifdef SCREEN_WIDTH
-
 		// Fine tune this to your liking.
 		if (cx > SCREEN_WIDTH - 20 && string[c] == ' ') {
 			cx = x;
 			cy += 8;
 		}
-		#endif
 	}
 
 	return cy;
@@ -76,8 +71,7 @@ int printString(int x, int y, char *string) {
 int main() {
 	setlocale(LC_CTYPE, "");
 	
-	printString(0, 0, "#include <stdio.h>");
-	printString(0, 8, "int main() {return 0;}");
+	printString(0, 0, "The quick brown fox  jumps over the lazy dog");
 
 	// Use upper half, lower half, and full to simulate graphics
 	for (int y = 0; y < SCREEN_HEIGHT; y += 2) {
