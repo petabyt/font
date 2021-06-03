@@ -1,7 +1,9 @@
 # 7x5 Font
 ![Demo](example.png)
 
-A simple font for OS dev, embedded, etc.
+A simple font for OS dev, embedded, etc.  
+
+For a 3x3 font, check out https://github.com/petabyt/font3x3  
 
 ## Features:
 - A-Z
