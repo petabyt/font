@@ -4,13 +4,15 @@
 #include <stdio.h>
 #include <wchar.h>
 #include <locale.h>
+#include <string.h>
 
+#define EXTENDED_ASCII
 #include "font.h"
 
 #define SCREEN_WIDTH 5 * 30
 #define SCREEN_HEIGHT 7 * 3 + 2
 
-char buffer[SCREEN_HEIGHT][SCREEN_WIDTH] = {0};
+char buffer[SCREEN_HEIGHT][SCREEN_WIDTH];
 
 void drawPixel(int x, int y) {
 	buffer[y][x] = 1;
@@ -70,12 +72,15 @@ int printString(int x, int y, char *string) {
 }
 
 int main() {
+	memset(buffer, 0, sizeof(buffer));
+
+	printString(1, 1, FNT_AQST"Espa"FNT_AN"ol?");
+	printString(1, 9, FNT_AI"S"FNT_AEX"!");
+
 	setlocale(LC_CTYPE, "");
-	
-	printString(0, 0, "The quick brown fox  jumps over the lazy dog");
 
 	// Use upper half, lower half, and full to simulate graphics
-	for (int y = 0; y < SCREEN_HEIGHT; y += 2) {
+	for (int y = 0; y < SCREEN_HEIGHT - 1; y += 2) {
 		for (int x = 0; x < SCREEN_WIDTH; x++) {
 			if (buffer[y][x] && buffer[y + 1][x]) {
 				printf("%ls", L"\u2588");

@@ -732,7 +732,7 @@ struct Font font[] = {
 "#####",
 "  #  ",
 "  #  "}},
-{'+', {
+{'-', {
 "     ",
 "     ",
 "     ",
@@ -741,6 +741,46 @@ struct Font font[] = {
 "     ",
 "     "}},
 #endif
+
+#ifdef EXTENDED_ASCII
+#define FNT_AN "\xa4"
+{0xa4, {
+"#### ",
+"     ",
+"#### ",
+"#   #",
+"#   #",
+"#   #",
+"#   #"}},
+#define FNT_AI "\xad"
+{0xad, {
+"#    ",
+"     ",
+"#    ",
+"#    ",
+"#    ",
+"#    ",
+"#    "}},
+#define FNT_AQST "\xa8"
+{0xa8, {
+" #   ",
+"     ",
+" #   ",
+"  #  ",
+"   # ",
+"#  # ",
+" ##  "}},
+#define FNT_AEX "\xa1"
+{0xa1, {
+"##   ",
+"     ",
+"#    ",
+"#    ",
+"#    ",
+"#    ",
+"#    "}},
+#endif
+
 /* Fallback/end Char. If you don't know the
 font size, use this as the "null terminator" */
 {0, {
