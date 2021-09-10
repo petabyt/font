@@ -93,7 +93,7 @@ int main() {
 			}
 		}
 
-		putchar('\n');
+		putchar('\r');
 	}
 
 	return 0;
