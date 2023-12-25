@@ -6,7 +6,6 @@
 #include <locale.h>
 #include <string.h>
 
-#define EXTENDED_ASCII
 #include "font.h"
 
 #define SCREEN_WIDTH 5 * 30
@@ -74,8 +73,8 @@ int printString(int x, int y, char *string) {
 int main() {
 	memset(buffer, 0, sizeof(buffer));
 
-	printString(1, 1, FNT_AQST"Espa"FNT_AN"ol?");
-	printString(1, 9, FNT_AI"S"FNT_AEX"!");
+	printString(1, 1, "Hello, World");
+	printString(1, 9, "Nice 5x7 Font!!");
 
 	setlocale(LC_CTYPE, "");
 

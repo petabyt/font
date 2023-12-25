@@ -3,10 +3,11 @@
 
 	This file is C89.
 
-	Compiler command line options:
-	-DNO_LOWERCASE
-	-DNO_SYMBOL
-	-DNO_NUMBERS
+	Compiler/preprocessor configs (optional):
+	-D NO_LOWERCASE
+	-D NO_SYMBOL
+	-D NO_NUMBERS
+	In case you are limited in space :)
 */
 #ifndef FONT_H
 #define FONT_H
@@ -742,45 +743,6 @@ struct Font font[] = {
 "#####",
 "     ",
 "     "}},
-#endif
-
-#ifdef EXTENDED_ASCII
-#define FNT_AN "\xa4"
-{0xa4, {
-"#### ",
-"     ",
-"#### ",
-"#   #",
-"#   #",
-"#   #",
-"#   #"}},
-#define FNT_AI "\xad"
-{0xad, {
-"#    ",
-"     ",
-"#    ",
-"#    ",
-"#    ",
-"#    ",
-"#    "}},
-#define FNT_AQST "\xa8"
-{0xa8, {
-" #   ",
-"     ",
-" #   ",
-"  #  ",
-"   # ",
-"#  # ",
-" ##  "}},
-#define FNT_AEX "\xa1"
-{0xa1, {
-"##   ",
-"     ",
-"#    ",
-"#    ",
-"#    ",
-"#    ",
-"#    "}},
 #endif
 
 /* Fallback/end Char. If you don't know the

@@ -1,3 +1,4 @@
+// Basic font.h reader code
 void font_draw_pixel(int x, int y);
 
 int font_print_char(int x, int y, char c) {
@@ -17,7 +18,7 @@ int font_print_char(int x, int y, char c) {
 			if (font[match].code[py][px] == '#') {
 				font_draw_pixel(x + px, y + py);
 
-				// Dynamix width character spacing
+				// Check width of characters for better spacing
 				if (px > maxLength) {
 					maxLength = px;
 				}
